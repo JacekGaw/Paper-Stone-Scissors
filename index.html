@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/solid.css" integrity="sha384-v2Tw72dyUXeU3y4aM2Y0tBJQkGfplr39mxZqlTBDUZAb9BGoC40+rdFCG0m10lXk" crossorigin="anonymous">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/fontawesome.css" integrity="sha384-q3jl8XQu1OpdLgGFvNRnPdj5VIlCvgsDQTQB6owSOHWlAurxul7f+JpUOVdAiJ5P" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Poiret+One&amp;subset=latin-ext" rel="stylesheet">
+    <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+
+   <main>
+       <header>
+          <div id="header">
+              <h1><span id="firstPage">Paper - Stone - Scissors</span></h1>
+           </div>
+       </header>
+       <!--Choise variant of game-->
+       <section id="version">
+           <div id="Version">
+               <div id="describe1">
+                   <h2>Play with computer</h2>
+                   <i class="fas fa-desktop"></i>
+                   <button id="start">Start!</button>
+               </div>
+               <div id="describe2">
+                   <h2>How to play..</h2>
+                   <p>Join my game and play this awesome game with computer! It's really simple to play. All you need is luck and of course computer or phone. You can type how many points players must earn to win. Then please write your name and you can start! To choose one of items just click on it using your mouse or use your keyboard. A - paper, B - stone, C - scissors. Good luck and have fun!</p>
+               </div>
+               <div style="clear: both"></div>
+           </div>
+       </section>
+    </main>
+    <!-- --------------------------------------------- -->   
+    <section id="nav">
+         <nav>
+              <div id="navigation">
+                   <span>Points to win: </span><input type="text">
+                   <button onclick="start()">Start!</button>
+               </div>
+        </nav>
+        <article id="withComputer">
+           <div id="panels">
+            <div id="playerPanel">
+               <h3 id="playerName">Gracz</h3>
+                <i class="fas fa-hand-paper playerIcons"onclick="checkTyping(0)"></i>
+                <i class="fas fa-hand-rock playerIcons"onclick="checkTyping(1)"></i>
+                <i class="fas fa-hand-scissors playerIcons"onclick="checkTyping(2)"></i>
+                <h3>Score: <span id="playerPoints">0</span></h3>
+            </div>
+            <div id="centralPanel">
+                <div id="comment"></div>
+                <div id="commentIcons"></div>
+                <div id="winner"></div>
+            </div>
+            <div id="computerPanel">
+               <h3>Computer</h3>
+                <i class="fas fa-hand-paper computerIcons"></i>
+                <i class="fas fa-hand-rock computerIcons"></i>
+                <i class="fas fa-hand-scissors computerIcons"></i>
+                <h3>Score: <span id="computerPoints">0</span></h3>
+            </div>
+            <div style="clear: both"></div>
+           </div>
+        </article>
+    </section>
+   
+    <!--<i class="fas fa-hand-paper"></i>-->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script defer src="https://use.fontawesome.com/releases/v5.0.8/js/solid.js" integrity="sha384-+Ga2s7YBbhOD6nie0DzrZpJes+b2K1xkpKxTFFcx59QmVPaSA8c7pycsNaFwUK6l" crossorigin="anonymous"></script>
+<script defer src="https://use.fontawesome.com/releases/v5.0.8/js/fontawesome.js" integrity="sha384-7ox8Q2yzO/uWircfojVuCQOZl+ZZBg2D2J5nkpLqzH1HY0C1dHlTKIbpRz/LG23c" crossorigin="anonymous"></script>
+<script src="assets/script.js"></script>    
+</body>
+</html>
