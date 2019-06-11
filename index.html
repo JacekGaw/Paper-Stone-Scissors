@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.9.0/css/all.css" integrity="sha384-i1LQnF23gykqWXg6jxC2ZbCbUMxyw5gLZY6UiUS98LYV5unm8GWmfkIS6jqJfb4E" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,700&display=swap&subset=latin-ext" rel="stylesheet">
     <link rel="stylesheet" href="assets/style.css">
     <title>Paper-stone-scissors</title>
@@ -43,6 +44,61 @@
             </section>
         </section>
     </main>
+    <section class="game__panel" id="game-panel">
+        <header>
+            <h1 class="left__header game__header">Paper-stone-scissors</h1>
+        </header>
+        <section class="row">
+            <section class="row__panel user__panel">
+                <header>
+                    <h3 class="user__name" id="user-name">Jacek</h3>
+                </header><hr>
+                <div class="row buttons__container">
+                    <button class="button__hand" id="user-paper" type="button">
+                        <i class="fas fa-hand-paper"></i>
+                    </button>
+                    <button class="button__hand" id="user-stone" type="button">
+                        <i class="fas fa-hand-rock"></i>
+                    </button>
+                    <button class="button__hand" id="user-scissors" type="button">
+                        <i class="fas fa-hand-scissors"></i>
+                    </button>
+                </div>
+                <div class="chosen__hand--container">
+                    <div id="user-chose" class="chosen__hand">
+                        <i class="fas fa-hand-scissors"></i>
+                    </div>
+                </div>
+                <p class="points">Points: <span id="user-points"></span></p>
+            </section>
+            <section class="row__panel output__panel">
+                <p class="round__counter">Round: <span id="round"></span></p>
+                <p class="comment__output" id="comment-output"></p>
+            </section>
+            <section class="row__panel comp__panel">
+                <header>
+                    <h3 class="user__name">Computer</h3>
+                </header><hr>
+                <div class="row buttons__container">
+                    <button class="button__hand" id="user-paper" type="button">
+                        <i class="fas fa-hand-paper"></i>
+                    </button>
+                    <button class="button__hand" id="user-stone" type="button">
+                        <i class="fas fa-hand-rock"></i>
+                    </button>
+                    <button class="button__hand" id="user-scissors" type="button">
+                        <i class="fas fa-hand-scissors"></i>
+                    </button>
+                </div>
+                <div class="chosen__hand--container">
+                    <div id="comp-chose" class="chosen__hand">
+                        <i class="fas fa-hand-scissors"></i>
+                    </div>
+                </div>
+                <p class="points">Points: <span id="comp-points"></span></p>
+            </section>
+        </section>
+    </section>
 
 <script src="/assets/script.js"></script>
 </body>
