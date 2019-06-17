@@ -21,6 +21,9 @@ function validateForm(){
     if(name.value=="" || pointsToWin.value==""){
         formOutput.innerHTML = "You must insert informations to all inputs";
     }
+    else if(pointsToWin.value <= 0){
+        formOutput.innerHTML = "Points to win can't be less or equal to zero";
+    }
     else {
         formOutput.innerHTML = "";
         for(let i=0; i<=pointsToWin.value.length; i++){
@@ -34,6 +37,7 @@ function validateForm(){
 };
 
 function openGamePanel(){
+    document.querySelector('#main-container').style.display = "none";
     gamePanel.style.right = 0;
     document.querySelector('#user-name').innerHTML = name.value;
     paper.addEventListener("click", checkMove);
@@ -102,7 +106,37 @@ function checkMove(){
 
     round += 1;
     roundContainer.innerHTML = round;
+    checkIfEnd();
 };
+
+function checkIfEnd(){
+    if(userPoints == pointsToWin.value){
+        paper.removeEventListener("click", checkMove);
+        rock.removeEventListener("click", checkMove);
+        scissors.removeEventListener("click", checkMove);
+        showPopup("user");
+    }
+    else if(compPoints == pointsToWin.value){
+        paper.removeEventListener("click", checkMove);
+        rock.removeEventListener("click", checkMove);
+        scissors.removeEventListener("click", checkMove);
+        showPopup("comp");
+    }
+}
+
+function showPopup(winner) {
+    document.querySelector('#popup-window').style.display = "flex";
+    if(winner == "user")
+        document.querySelector('#winner').innerHTML = name.value;
+    else if(winner == "comp")
+        document.querySelector('#winner').innerHTML = "Computer";
+    document.querySelector('#runds-end').innerHTML = "Rounds: " + round;
+    document.querySelector('#user-score').innerHTML = name.value + ": " + userPoints;
+    document.querySelector('#comp-score').innerHTML = "Computer: " + compPoints;
+    document.querySelector('#new-game').addEventListener('click',function(){
+        location.reload();
+    });
+}
 
 function animateCompMove(chosenHand){
     document.querySelector('#comp-chosen-hand').className = '';

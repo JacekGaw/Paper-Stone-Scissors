@@ -382,6 +382,100 @@ body {
   }
 }
 
+.popup__window {
+  position: fixed;
+  top: 0%;
+  left: 0%;
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: rgba(130, 167, 166, 0.8);
+  display: none;
+}
+
+.popup__window .popup {
+  text-align: center;
+  background-color: #785964;
+  border-radius: 10%;
+  padding: 50px 100px;
+  opacity: 1;
+}
+
+@media (max-width: 500px) {
+  .popup__window .popup {
+    padding: 50px 50px;
+  }
+}
+
+.popup__window .popup .popup__winner {
+  font-weight: 400;
+  font-size: 2rem;
+  text-shadow: 0 0 10px rgba(250, 250, 250, 0.8);
+  margin-bottom: 30px;
+}
+
+@media (max-width: 500px) {
+  .popup__window .popup .popup__winner {
+    font-size: 1.5rem;
+  }
+}
+
+.popup__window .popup .popup__info {
+  font-weight: 300;
+  font-size: 1.2rem;
+  margin: 10px 0;
+}
+
+@media (max-width: 500px) {
+  .popup__window .popup .popup__info {
+    font-size: 1rem;
+  }
+}
+
+.popup__window .popup .popup__button {
+  width: 200px;
+  font-size: 1rem;
+  text-align: center;
+  background-color: #82a7a6;
+  border: 0;
+  padding: 15px 2%;
+  margin: 20px 0;
+  font-weight: 700;
+  text-transform: uppercase;
+  position: relative;
+  -webkit-box-shadow: 10px 10px 2px #222;
+          box-shadow: 10px 10px 2px #222;
+  -webkit-transition: 0.3s all;
+  transition: 0.3s all;
+}
+
+@media (max-width: 500px) {
+  .popup__window .popup .popup__button {
+    font-size: 0.8rem;
+    width: 150px;
+  }
+}
+
+.popup__window .popup .popup__button:focus {
+  -webkit-box-shadow: -10px 10px 2px #222;
+          box-shadow: -10px 10px 2px #222;
+  background-color: #9ed0e6;
+}
+
+.popup__window .popup .popup__button:hover {
+  background-color: #9ed0e6;
+  -webkit-box-shadow: -10px 10px 2px #222;
+          box-shadow: -10px 10px 2px #222;
+}
+
 @-webkit-keyframes startMoveBefore {
   0% {
     top: -25px;

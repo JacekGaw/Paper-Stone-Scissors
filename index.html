@@ -10,7 +10,7 @@
     <title>Paper-stone-scissors</title>
 </head>
 <body>
-    <main>
+    <main id="main-container">
         <section class="row">
             <section class="panel__left">
                 <header>
@@ -98,6 +98,17 @@
                 <p class="points">Points: <span id="comp-points">0</span></p>
             </section>
         </section>
+    </section>
+    <section class="popup__window" id="popup-window">
+        <div class="popup">
+            <header>
+                <h3 class="popup__winner"><span id="winner"></span> wins!</h3>
+                <p class="popup__info" id="runds-end"></p>
+                <p class="popup__info" id="user-score"></p>
+                <p class="popup__info" id="comp-score"></p>
+                <button class="popup__button" role="button" id="new-game">Start new game</button>
+            </header>
+        </div>
     </section>
 
 <script src="/assets/script.js"></script>
