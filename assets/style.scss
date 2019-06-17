@@ -149,12 +149,13 @@ body {
     box-sizing: border-box;
     position: absolute;
     top: 0;
-    left: 0;
+    right: 100%;
     width: 100%;
     min-height: 100vh;
     padding: 2%;
     background-color: $color5;
     text-align: center;
+    transition: right 0.5s;
 
     .game__header {
         font-weight: 500;
@@ -179,6 +180,9 @@ body {
         .buttons__container {
             justify-content: space-around;
             padding: 10px 0;
+            @media (max-width: 800px){
+                flex-direction: row;
+            }
 
             .button__hand {
                 width: 70px;
@@ -209,6 +213,8 @@ body {
                 display: flex;
                 justify-content: center;
                 align-items: center;
+                transform: scale(0);
+                transition: transform 0.3s;
 
                 .fas {
                     font-size: 4rem;
@@ -231,6 +237,22 @@ body {
         .round__counter {
             font-size: 1.2rem;
             color: #222;
+        }
+        .comment__output {
+            font-size: 2rem;
+            padding: 10px;
+            text-shadow: 0 0 5px rgba(250,250,250,0.7);
+
+            .comment__output--tip {
+                font-size: 1.2rem;
+            }
+        }
+    }
+    .comp__panel {
+        display: flex;
+        flex-direction: column;
+        @media (max-width: 800px){
+            flex-direction: column-reverse;
         }
     }
 }

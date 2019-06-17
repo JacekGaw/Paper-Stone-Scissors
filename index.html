@@ -51,28 +51,28 @@
         <section class="row">
             <section class="row__panel user__panel">
                 <header>
-                    <h3 class="user__name" id="user-name">Jacek</h3>
+                    <h3 class="user__name" id="user-name"></h3>
                 </header><hr>
                 <div class="row buttons__container">
-                    <button class="button__hand" id="user-paper" type="button">
+                    <button class="button__hand" id="paper" type="button">
                         <i class="fas fa-hand-paper"></i>
                     </button>
-                    <button class="button__hand" id="user-stone" type="button">
+                    <button class="button__hand" id="rock" type="button">
                         <i class="fas fa-hand-rock"></i>
                     </button>
-                    <button class="button__hand" id="user-scissors" type="button">
+                    <button class="button__hand" id="scissors" type="button">
                         <i class="fas fa-hand-scissors"></i>
                     </button>
                 </div>
                 <div class="chosen__hand--container">
                     <div id="user-chose" class="chosen__hand">
-                        <i class="fas fa-hand-scissors"></i>
+                        <i class="fas" id="user-chosen-hand"></i>
                     </div>
                 </div>
-                <p class="points">Points: <span id="user-points"></span></p>
+                <p class="points">Points: <span id="user-points">0</span></p>
             </section>
             <section class="row__panel output__panel">
-                <p class="round__counter">Round: <span id="round"></span></p>
+                <p class="round__counter">Round: <span id="round">1</span></p>
                 <p class="comment__output" id="comment-output"></p>
             </section>
             <section class="row__panel comp__panel">
@@ -80,22 +80,22 @@
                     <h3 class="user__name">Computer</h3>
                 </header><hr>
                 <div class="row buttons__container">
-                    <button class="button__hand" id="user-paper" type="button">
+                    <button class="button__hand" id="paper" type="button" disabled>
                         <i class="fas fa-hand-paper"></i>
                     </button>
-                    <button class="button__hand" id="user-stone" type="button">
+                    <button class="button__hand" id="rock" type="button" disabled>
                         <i class="fas fa-hand-rock"></i>
                     </button>
-                    <button class="button__hand" id="user-scissors" type="button">
+                    <button class="button__hand" id="scissors" type="button" disabled>
                         <i class="fas fa-hand-scissors"></i>
                     </button>
                 </div>
                 <div class="chosen__hand--container">
                     <div id="comp-chose" class="chosen__hand">
-                        <i class="fas fa-hand-scissors"></i>
+                        <i class="fas " id="comp-chosen-hand"></i>
                     </div>
                 </div>
-                <p class="points">Points: <span id="comp-points"></span></p>
+                <p class="points">Points: <span id="comp-points">0</span></p>
             </section>
         </section>
     </section>
